@@ -1,5 +1,9 @@
 import React from "react"
 
+import Toptext from "./Toptext"
+import Bottomtext from "./Bottomtext"
+
+
 export default function Meme() {
     const [meme, setMeme] = React.useState({
         topText: "",
@@ -43,7 +47,7 @@ export default function Meme() {
             <div className="form">
                 <input 
                     type="text"
-                    placeholder="Top text"
+                    placeholder="Text 1"
                     className="form--input"
                     name="topText"
                     value={meme.topText}
@@ -51,7 +55,7 @@ export default function Meme() {
                 />
                 <input 
                     type="text"
-                    placeholder="Bottom text"
+                    placeholder="Text 2"
                     className="form--input"
                     name="bottomText"
                     value={meme.bottomText}
@@ -64,11 +68,19 @@ export default function Meme() {
                     Get a new meme image 🖼
                 </button>
             </div>
+
+
             <div className="meme">
                 <img src={meme.randomImage} className="meme--image" />
-                <h2 className="meme--text top">{meme.topText}</h2>
-                <h2 className="meme--text bottom">{meme.bottomText}</h2>
+                
+
+                <Toptext topText={meme.topText}/>
+                
+                <Bottomtext bottomText={meme.bottomText}/>
+                
             </div>
         </main>
     )
 }
+{/* <h2 className="meme--text bottom">{meme.bottomText}</h2> */}
+{/* <h2 className="meme--text top">{meme.topText}</h2>  */}

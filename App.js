@@ -1,6 +1,7 @@
 import React from "react"
 import Header from "./components/Header"
 import Meme from "./components/Meme"
+import Draggable from 'react-draggable';
 /**
  * Challenge: 
  * - Create a Meme component.
@@ -13,6 +14,9 @@ export default function App() {
         <div>
             <Header />
             <Meme />
+            
+            
+
         </div>
     )
 }
